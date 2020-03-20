@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>ToBuy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label postion="stacked">
+        ToBuy
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="toBuy_title"></ion-input>
+    </ion-item>
+      <ion-item>
+          <ion-label postion="stacked">
+              Price
+          </ion-label>
+          <ion-input type="number" [(ngModel)]="toBuy_price"></ion-input>
+        </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="add()" Color="primary">
+    Add ToBuy
+  </ion-button>
+  <ion-button expand="full" (click)="back()" Color="danger">
+      Go Back
+    </ion-button>
+
+</ion-content>

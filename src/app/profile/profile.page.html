@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="container">
+        <ion-item class="item" *ngFor="let user of userProfile">
+          <ion-label postion="stacked">
+            FirstName:{{user.data().FirstName}}
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="FirstName"></ion-input>
+        </ion-item>
+          <ion-item class="item" *ngFor="let user of userProfile">
+              <ion-label postion="stacked">
+                  LastName:{{user.data().LastName}}
+              </ion-label>
+              <ion-input type="text" [(ngModel)]="LastName"></ion-input>
+            </ion-item>
+            <ion-item class="item" *ngFor="let user of userProfile">
+                <ion-label postion="stacked">
+                   Budget:${{user.data().Budget}}
+                </ion-label>
+                <ion-input type="number" [(ngModel)]="Budget"></ion-input>
+              </ion-item>
+      </ion-list>
+      <ion-button expand="full" (click)="update()" Color="primary">
+        update
+      </ion-button>
+      <ion-button expand="full" (click)="add()" Color="primary">
+          Submit
+        </ion-button>
+        <ion-button expand="full" (click)="home()" Color="primary">
+          Home
+        </ion-button>
+
+</ion-content>
